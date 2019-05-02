@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sx2-aB-ZxL">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Y70-Z5-Fzw">
+            <objects>
+                <viewController id="Sx2-aB-ZxL" customClass="ViewController" customModule="Book_Scanner_Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HfU-Ta-Zj7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Scanner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtF-Xf-NkY">
+                                <rect key="frame" x="49" y="44" width="316" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ISBN..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnk-Mg-bx2">
+                                <rect key="frame" x="49" y="109" width="316" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93a-lM-HBX">
+                                <rect key="frame" x="49" y="147" width="316" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterISBN:" destination="Sx2-aB-ZxL" eventType="touchUpInside" id="XIv-Df-3Nx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Search Results" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-Js-R1V">
+                                <rect key="frame" x="49" y="230" width="316" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-Gs-guz">
+                                <rect key="frame" x="105" y="803" width="205" height="46"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Search History"/>
+                                <connections>
+                                    <segue destination="G8B-g1-RGy" kind="show" identifier="name" id="4eg-n6-eiE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sBr-Ye-UPG" firstAttribute="trailing" secondItem="EtF-Xf-NkY" secondAttribute="trailing" constant="49" id="3q8-yi-uRt"/>
+                            <constraint firstItem="93a-lM-HBX" firstAttribute="top" secondItem="nnk-Mg-bx2" secondAttribute="bottom" constant="8" id="77W-zc-EMd"/>
+                            <constraint firstItem="sBr-Ye-UPG" firstAttribute="bottom" secondItem="tVh-Gs-guz" secondAttribute="bottom" constant="13" id="Ggy-4j-EqN"/>
+                            <constraint firstItem="sBr-Ye-UPG" firstAttribute="trailing" secondItem="tVh-Gs-guz" secondAttribute="trailing" constant="104" id="M9r-eX-oGF"/>
+                            <constraint firstItem="EtF-Xf-NkY" firstAttribute="top" secondItem="sBr-Ye-UPG" secondAttribute="top" id="PIx-J8-724"/>
+                            <constraint firstItem="tVh-Gs-guz" firstAttribute="top" secondItem="qWL-Js-R1V" secondAttribute="bottom" constant="42" id="RkS-NY-7TT"/>
+                            <constraint firstItem="93a-lM-HBX" firstAttribute="leading" secondItem="sBr-Ye-UPG" secondAttribute="leading" constant="49" id="b2O-zz-Q4O"/>
+                            <constraint firstItem="nnk-Mg-bx2" firstAttribute="leading" secondItem="sBr-Ye-UPG" secondAttribute="leading" constant="49" id="bSM-Qq-7Up"/>
+                            <constraint firstItem="tVh-Gs-guz" firstAttribute="leading" secondItem="sBr-Ye-UPG" secondAttribute="leading" constant="105" id="fc9-9c-pIH"/>
+                            <constraint firstItem="qWL-Js-R1V" firstAttribute="leading" secondItem="93a-lM-HBX" secondAttribute="leading" id="gQR-IC-aMn"/>
+                            <constraint firstItem="EtF-Xf-NkY" firstAttribute="leading" secondItem="sBr-Ye-UPG" secondAttribute="leading" constant="49" id="jvH-Vf-ZCR"/>
+                            <constraint firstItem="sBr-Ye-UPG" firstAttribute="trailing" secondItem="nnk-Mg-bx2" secondAttribute="trailing" constant="49" id="o6v-Cm-S3P"/>
+                            <constraint firstItem="sBr-Ye-UPG" firstAttribute="trailing" secondItem="93a-lM-HBX" secondAttribute="trailing" constant="49" id="oiW-XW-H7l"/>
+                            <constraint firstItem="qWL-Js-R1V" firstAttribute="top" secondItem="93a-lM-HBX" secondAttribute="bottom" constant="51" id="pJy-Qd-nB3"/>
+                            <constraint firstItem="nnk-Mg-bx2" firstAttribute="top" secondItem="EtF-Xf-NkY" secondAttribute="bottom" constant="8" id="tdu-fq-Xbp"/>
+                            <constraint firstItem="qWL-Js-R1V" firstAttribute="trailing" secondItem="93a-lM-HBX" secondAttribute="trailing" id="whK-3z-6lA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sBr-Ye-UPG"/>
+                    </view>
+                    <connections>
+                        <outlet property="isbnField" destination="nnk-Mg-bx2" id="b73-Wt-uhi"/>
+                        <outlet property="searchResults" destination="qWL-Js-R1V" id="3gn-ud-9Lo"/>
+                        <segue destination="G8B-g1-RGy" kind="presentation" identifier="search" id="xLU-yL-Ldr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7J-hv-9mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="-72.321428571428569"/>
+        </scene>
+        <!--Search History View Controller-->
+        <scene sceneID="Y2h-oT-BdL">
+            <objects>
+                <viewController id="G8B-g1-RGy" customClass="SearchHistoryViewController" customModule="Book_Scanner_Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUr-qn-x9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Scanner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-Dw-CAz">
+                                <rect key="frame" x="49" y="44" width="316" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCs-hj-QmO">
+                                <rect key="frame" x="105" y="803" width="205" height="46"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Sx2-aB-ZxL" kind="show" identifier="name" id="eMA-GQ-tD8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Search History" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EvL-8k-S9m">
+                                <rect key="frame" x="49" y="121" width="316" height="645"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bCs-hj-QmO" firstAttribute="top" secondItem="EvL-8k-S9m" secondAttribute="bottom" constant="37" id="1is-4O-428"/>
+                            <constraint firstItem="kMO-ZU-Haq" firstAttribute="bottom" secondItem="bCs-hj-QmO" secondAttribute="bottom" constant="13" id="8Ul-oh-Dc6"/>
+                            <constraint firstItem="QIe-Dw-CAz" firstAttribute="top" secondItem="kMO-ZU-Haq" secondAttribute="top" id="EbM-2U-8Rx"/>
+                            <constraint firstItem="EvL-8k-S9m" firstAttribute="leading" secondItem="kMO-ZU-Haq" secondAttribute="leading" constant="49" id="Mzf-AF-uNV"/>
+                            <constraint firstItem="EvL-8k-S9m" firstAttribute="top" secondItem="QIe-Dw-CAz" secondAttribute="bottom" constant="20" id="Rqi-4V-ITe"/>
+                            <constraint firstItem="QIe-Dw-CAz" firstAttribute="leading" secondItem="kMO-ZU-Haq" secondAttribute="leading" constant="49" id="Zz2-Ko-E2g"/>
+                            <constraint firstItem="bCs-hj-QmO" firstAttribute="leading" secondItem="kMO-ZU-Haq" secondAttribute="leading" constant="105" id="awR-PP-0OK"/>
+                            <constraint firstItem="kMO-ZU-Haq" firstAttribute="trailing" secondItem="bCs-hj-QmO" secondAttribute="trailing" constant="104" id="bLG-ag-Ycu"/>
+                            <constraint firstItem="kMO-ZU-Haq" firstAttribute="trailing" secondItem="EvL-8k-S9m" secondAttribute="trailing" constant="49" id="inA-Ye-ZqP"/>
+                            <constraint firstItem="kMO-ZU-Haq" firstAttribute="trailing" secondItem="QIe-Dw-CAz" secondAttribute="trailing" constant="49" id="xSD-QS-gVl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kMO-ZU-Haq"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchHistory" destination="EvL-8k-S9m" id="eNH-pt-fzM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMN-Jp-BA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.39130434782612" y="-72.321428571428569"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4eg-n6-eiE"/>
+    </inferredMetricsTieBreakers>
+</document>
+
+
